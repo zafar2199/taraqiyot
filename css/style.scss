@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #00101B;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+
+
+// navbar 
+.navbarr{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 25px 0;
+}
+.sticky{
+padding: 10px 0;
+background: #020e16;
+}
+
+.content{
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    
+}
+
+.logo{
+    a{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+.menu-list{
+    display: flex;
+    li{
+        font-size: 20px;
+        font-weight: 300;
+        margin-right: 15px;
+        a{
+            color: #fff;
+            transition: all 0.3 ease;
+            &:hover{
+                color: #6db5ff;
+
+        }
+        }
+    }
+}
+
+.icon-nav{
+    cursor: pointer;
+    display: none;
+}
+
+.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+
+}
+
+@media (max-width:868px){
+    .icon-nav{
+        display: block;
+    }
+    .icon-nav.hide{
+        display: none;
+    }
+    .menu-list{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #020e16;
+        height: 120vh;
+        width: 100%;
+        display: block;
+        padding: 40px 10px;
+        text-align: center;
+        transition: all 0.3s ease;
+        li{
+            margin-top: 25px;
+        }
+     
+    }
+    .active{
+        left: 0%;
+    }
+}
+// navbar end
+
+
+// header-start
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/sectionbackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    position: relative;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+
+
+
+.header-content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    h1{
+        position: absolute ;
+        font-size: 80px;
+        font-weight: 800;
+        margin: 70px 0 0 90px;
+    }
+
+}
+
+// header-exit 
+
+// taitle
+.title-center{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.title-menyu{
+    font-size: 50px;
+    font-weight: 700;
+}
+// taitle end
+
+// box-khimya-biology 
+
+// box khimya biology 
+
+.box-img-content{
+    color: #fff;
+}
+.box-text{
+    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    h2{
+        font-size: 50px;
+        font-weight: 700;
+    }
+    span{
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+.ximya-text{
+    align-items: flex-end;
+}
+.box-img{
+    height: 300px;
+    background-image: url(../images/box-img-biology.jpg);
+    border-radius: 100px 0 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+}
+.box-img2{
+    height: 300px;
+    background-image: url(../images/box-img-ximya.jpg) ;
+    border-radius: 100px 0 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+// box-khimya-biology 
+
+// circle box 
+
+
+.sircle-slider{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    h3{
+        margin-top: 5px;
+        font-size: 30px;
+        font-weight: 400;
+    }
+    span{
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+    .circle-box{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center ;
+    }
+
+    .fon-1{
+        background-image: url(../images/diana.png);
+    }
+    .fon-2{
+        background-image: url(../images/Ellipse2.png);
+    }
+    .fon-3{
+        background-image: url(../images/Ellipse3.png);
+    }   
+
+// circle box end
+
+
+// accordion
+.accordion{
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid #6db5ff;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    .icon{
+        position: absolute;
+        margin: 0 10px 0 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: url(../icon/plus.svg) no-repeat center  ;   
+        float: left;
+        transition: all .5 ease-in;
+    }
+    h5{
+        margin: 0;
+        margin-left: 40px;
+        font-size: 22px;
+        color: #dee4e9;
+        transition: all .5s ease;
+    }
+}
+
+.active .icon{
+    background: url(../icon/minus.svg) no-repeat ;
+}
+
+.active{
+    // background-color: #fff;
+    color: #000;
+    h5{
+        color: #fff;
+    }
+}
+
+.panel{
+    padding: 0 15px;
+    border-left: 1px solid #6db5ff;
+    margin: 20px;
+    font-size: 15px;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease-e;
+}
+
+// acardion end
+
+// cantact 
+
+.signup__input{
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: 1px solid #6db5ff;
+    margin-top: 10px;
+  }
+  .input{
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    // line-height: 1.2;        
+    padding:  2px;
+    outline: none;
+    border: none;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    font-size: 20px;
+    opacity: 1; /* Firefox */
+  }
+  
+  .leble__input{
+    color: #6db5ff;
+    font-size: 22px;
+    font-weight: 400;
+  }
+   .bio{
+     max-width: 400px;
+     min-height: 40px;
+     max-height: 200px;
+     min-width: 300px;
+   }
+
+   .btn-call{
+width: 60%;
+margin: 0 auto;
+   }
+   
+   .btn-sign{
+       background-color: #020e16;
+       border: 1px solid #6db5ff;
+   }
+// footuer 
+.footuer{
+    width: 100%;
+
+    background-color: #020e16;
+}
+
+.call{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+        font-size: 18px;
+    }
+}
+
+.icon-mesengr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-icon-ms{
+    margin-right: 15px;
+    transition: all .5 ease;
+    color: #6db5ff;
+    &:hover{
+        color: #fff;
+    }
+}
+
+
+// responsive 
+
+@media(max-width:992px){
+    .header{
+        height: 80vh;
+    }
+
+    .header-content{
+        h1{
+            font-size: 50px;
+            margin-left: 50px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .header-icon{
+        width: 80px;
+    }
+}
+
+@media(max-width:720px){
+    .header{
+        width: 100%;
+        height: 40vh;
+    }
+
+    .header-content{
+        h1{
+            font-size: 30px;
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .header-icon{
+        width: 60px;
+    }
+
+    
+    .box-text{
+        align-items: center;
+    }
+
+    
+}
+
+@media(max-width:540px){
+    .header{
+        height: 40vh;
+    }
+
+    .header-content{
+        h1{
+            font-size: 25px;
+            margin-left: 30px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .header-icon{
+        width: 50px;
+    }
+
+    .title-center{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .title-menyu{
+        font-size: 30px;
+        font-weight:600;
+    }
+
+    .box-text{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .box-img{
+        width: 90%;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .box-img2{
+        width: 90%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .box-text{
+        align-items: center;
+
+    }
+
+    .signup__input{
+        width: 90%;
+    }
+}
+
